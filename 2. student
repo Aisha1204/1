@@ -1,0 +1,40 @@
+public class Student {
+    String firstName;
+    String lastName;
+    String group;
+    double averageMark;
+    Student[] array = new Student[100];
+    public Student(String firstName,String lastName, String group, double averageMark){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.averageMark = averageMark;
+    }
+    public Student(){};
+
+    public int getScholarship(){
+        if (averageMark == 5){
+            return 1000;
+        }
+        return 80;
+    }
+}
+class Aspirant extends Student {
+    String scienceWork;
+
+    public Aspirant(String firstName,String lastName, String group, double averageMark, String science) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.averageMark = averageMark;
+        this.scienceWork = science;
+    }
+
+    @Override
+    public int getScholarship() {
+        if(averageMark == 5.0){
+            return 200;
+        }
+        return 180;
+    }
+}
